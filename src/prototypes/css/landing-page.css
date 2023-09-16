@@ -2,6 +2,11 @@ html{
     font-family: 'Inter', sans-serif;
     margin: 0%;
     color: aliceblue;
+    
+}
+
+footer {
+    background-color: #040C0E;
 }
 
 body{
@@ -12,6 +17,7 @@ p{
     font-weight: 300;
     
 }
+
 
 .p20 {
     font-size: 20pt;
@@ -26,9 +32,13 @@ h1, h2, h3, h4{
     
 }
 
-h2{
+h2, a{
     font-size: 50pt;
+    text-decoration: none;
+    color: aliceblue;
 }
+
+
 
 
 
@@ -51,9 +61,16 @@ h2{
     margin: 0%;
 }
 
-
 .relative{
     position: relative;
+}
+
+.pt-25 {
+    padding-top: 25vh;
+}
+
+.pb-10 {
+    padding-bottom: 10vh;
 }
 
 #main { 
@@ -94,9 +111,9 @@ h2{
 }
 
 #main > .flex > #slogan {
-    padding-top: 20vh;
-    margin-right:15vh ;
-    padding-bottom: 10vh;
+    margin-right:15vh;
+    padding-bottom: 20vh;
+    padding-top: 10vh;
 
 }
 #main > .flex > #slogan > #filler1{
@@ -136,7 +153,8 @@ h2{
 }
 /*Swipe header*/
 #swipe > div > h1 {
-    padding: 25vh 70vh 0vh 84vh;
+    padding-right: 70vh;
+    padding-left: 84vh;
 }
 
 /* swipe text */
@@ -159,13 +177,14 @@ h2{
 
 /*create header*/
 #create > .flex > #createText > h1 {
-    padding: 25vh 10vh 0vh 10vh;
+    padding-left: 10vh;
+    padding-bottom: 0%;
     
 }
 
 /* create text */
 #create > .flex > #createText > p {
-    padding: 0vh 0vh 10vh 33vh;
+    padding: 0vh 0vh 30vh 33vh;
     
 }
 
@@ -183,3 +202,16 @@ h2{
 #discover {
     background-color: #07171A;
 }
+
+#discover > h1 {
+    padding-left:70vh ;
+}
+
+#discover > .flex > p {
+    padding-right: 8vh;
+}
+
+#discover > .flex > img{
+    padding: 10vh 8vh 10vh 10vh;
+}
+

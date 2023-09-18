@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Spinder</title>
+    <link rel="stylesheet" href="./css/play.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+    </style>
 </head>
 <body>
-
+    <div class="wrapper">
+        <div id="songContainer">
+            <!-- Jo fiks info fra Spotify API -->
+            <img id="albumCover" src="./img/PlaceholderAlbumCover.jpg" alt="Søt liten guttelutt"> 
+            <span id="sang">Se så søt han er</span>
+            <span id="artist">Stiv Jensen</span>
+            <div id="flexContainerIcons">
+                <div id="dislike">
+                    <img src="./img/Xkryss.png" alt="X">
+                </div>
+                <div id="like">
+                    <img src="./img/Hjertehjarte.png" alt="<3">
+                </div>
+            </div>
+        </div>
+        <a href="main.html"><img id="back" src="./img/Back.png" alt="<"></a>
+    </div>
 </body>
 </html>

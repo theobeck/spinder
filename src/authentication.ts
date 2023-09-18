@@ -22,11 +22,13 @@ export class SpotifyAPI {
   }
 
   public static getAuthorization(): SpotifyAPI | null {
-    const storedAuth = sessionStorage.getItem('authorization');
+    const storedAuth = sessionStorage.getItem('authentication');
     if (storedAuth) {
+      console.log("I AM STORED")
       const auth = JSON.parse(storedAuth);
       const access_token = auth.access_token;
       const expires = auth.expires;
+      console.log(access_token);
 
       if (expires < Date.now()) {
         sessionStorage.removeItem('authentication');

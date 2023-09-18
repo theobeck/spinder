@@ -3,7 +3,7 @@ import './index.css';
 import { Link } from 'react-router-dom';
 import { SpotifyAPI } from '../../authentication.ts';
 import { useQuery } from 'react-query';
-import {SongRating} from "../PlayPage";
+import { SongRating } from '../PlayPage';
 
 function FavoritesSongItem(props: { albumCover: string; title: string; artist: string }) {
   return (
@@ -26,10 +26,13 @@ function FavoritesSongItem(props: { albumCover: string; title: string; artist: s
 export default function FavoritesPage() {
   const spotifyAPI = SpotifyAPI.getAuthorization()!;
 
-  const favoriteSongs = (JSON.parse(localStorage.getItem('ratedSongs') ?? '[]') as SongRating[])
-      .filter((song: SongRating) => song.liked);
+  const favoriteSongs = (JSON.parse(localStorage.getItem('ratedSongs') ?? '[]') as SongRating[]).filter(
+    (song: SongRating) => song.liked,
+  );
 
-  const songQuery = useQuery('song', () => spotifyAPI.getSongInfo(favoriteSongs.map((song: SongRating) => song.songId)));
+  const songQuery = useQuery('song', () =>
+    spotifyAPI.getSongInfo(favoriteSongs.map((song: SongRating) => song.songId)),
+  );
 
   console.log(songQuery.data);
 

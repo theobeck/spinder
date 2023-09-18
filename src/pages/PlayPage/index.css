@@ -1,0 +1,73 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-image: url('../img/PlayBackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#songContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: absolute;
+  height: 50vh;
+  top: 22vh;
+  width: 25vw;
+  color: white;
+  font-size: 28px;
+}
+
+#flexContainerIcons {
+  display: flex;
+  width: 75%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#like {
+  background-color: #679289;
+  padding: 8%;
+  border-radius: 30px;
+}
+
+#dislike {
+  background-color: #ee2e31;
+  padding: 8%;
+  border-radius: 30px;
+}
+
+#albumCover {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.rateButton {
+  cursor: pointer;
+}
+
+#artist {
+  color: #858585;
+}
+#back {
+  position: fixed;
+  top: 2vh;
+  left: 1.5vw;
+  height: 7vh;
+}

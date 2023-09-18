@@ -75,7 +75,7 @@ export class SpotifyAPI {
   }
 
   public logout() {
-    sessionStorage.removeItem('authorization');
+    sessionStorage.removeItem('authentication');
     window.location.href = '/';
   }
 }

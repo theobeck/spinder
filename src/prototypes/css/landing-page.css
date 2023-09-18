@@ -1,87 +1,81 @@
-html{
-    font-family: 'Inter', sans-serif;
-    margin: 0%;
-    color: aliceblue;
-    
+html {
+  font-family: 'Inter', sans-serif;
+  margin: 0%;
+  color: aliceblue;
 }
 
 footer {
-    background-color: #040C0E;
+  background-color: #040c0e;
 }
 
-body{
-    margin: 0%;
+body {
+  margin: 0%;
 }
 
-p{
-    font-weight: 300;
-    
+p {
+  font-weight: 300;
 }
-
 
 .p20 {
-    font-size: 20pt;
+  font-size: 20pt;
 }
 
 .p90 {
-    font-size: 90pt;
+  font-size: 90pt;
 }
 
-h1, h2, h3, h4{
-    font-weight: 400;
-    
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
 }
 
-h2, a{
-    font-size: 50pt;
-    text-decoration: none;
-    color: aliceblue;
+h2,
+a {
+  font-size: 50pt;
+  text-decoration: none;
+  color: aliceblue;
 }
-
-
-
-
 
 .flex {
-    display: flex;
-    position: relative;
-    flex-wrap: nowrap;
-        
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
 }
 
-.sp-a{
-    justify-content: space-around;
+.sp-a {
+  justify-content: space-around;
 }
 
-.sp-b{
-    justify-content: space-between;
+.sp-b {
+  justify-content: space-between;
 }
 
-.m-null{
-    margin: 0%;
+.m-null {
+  margin: 0%;
 }
 
-.relative{
-    position: relative;
+.relative {
+  position: relative;
 }
 
 .pt-25 {
-    padding-top: 25vh;
+  padding-top: 25vh;
 }
 
 .pb-10 {
-    padding-bottom: 10vh;
+  padding-bottom: 10vh;
 }
 
-#main { 
-    background-color: #071E22;
-    padding-bottom: 5%;
+#main {
+  background-color: #071e22;
+  padding-bottom: 5%;
 }
 
 /* icon bilde*/
 #main > nav > .flex > img {
-    padding: 2vh 2vh;
-    
+  padding: 2vh 2vh;
 }
 
 /* headding */
@@ -93,124 +87,104 @@ h2, a{
 
 /* login button */
 #main > nav > div > button {
-    margin-top: 3vh;
-    align-self: flex-end;
-    background-color: #679289;
-    padding: 2vh 7vh;
-    border-radius: 40px;
-    font-size: 30px;
-    color: aliceblue;
-    
+  margin-top: 3vh;
+  align-self: flex-end;
+  background-color: #679289;
+  padding: 2vh 7vh;
+  border-radius: 40px;
+  font-size: 30px;
+  color: aliceblue;
 }
 
 /*phones image*/
 #main > .flex > #phones > img {
-    padding: 25vh 13vh 19vh 25vh;
-
+  padding: 25vh 13vh 19vh 25vh;
 }
 
 #main > .flex > #slogan {
-    margin-right:15vh;
-    padding-bottom: 20vh;
-    padding-top: 10vh;
-
+  margin-right: 15vh;
+  padding-bottom: 20vh;
+  padding-top: 10vh;
 }
-#main > .flex > #slogan > #filler1{
-    background-color: #6792895a;
-    padding: 5vh 3vh 10vh 5vh;
+#main > .flex > #slogan > #filler1 {
+  background-color: #6792895a;
+  padding: 5vh 3vh 10vh 5vh;
 }
-#main > .flex > #slogan > #filler2{
-    background-color: #6792893e;
-    padding: 5vh 3vh 10vh 5vh;
-    border-radius: 0px 40px 40px 0px;
-}
-
-
-#main > .flex > #slogan > #textbox{
-    background-color: #67928985;
-    padding: 10vh 15vh 5vh 5vh;
-    border-radius: 40px 0px 0px 40px;
+#main > .flex > #slogan > #filler2 {
+  background-color: #6792893e;
+  padding: 5vh 3vh 10vh 5vh;
+  border-radius: 0px 40px 40px 0px;
 }
 
-
-#main > .flex > #slogan h2{
-    margin: 0%;
-
+#main > .flex > #slogan > #textbox {
+  background-color: #67928985;
+  padding: 10vh 15vh 5vh 5vh;
+  border-radius: 40px 0px 0px 40px;
 }
 
-#main > .flex > #slogan p{
-    padding-bottom: 5vh;
-    padding-left: 8vh;
-    margin: 0%;
-    
+#main > .flex > #slogan h2 {
+  margin: 0%;
 }
 
+#main > .flex > #slogan p {
+  padding-bottom: 5vh;
+  padding-left: 8vh;
+  margin: 0%;
+}
 
 #swipe {
-    background-color: #07171A;
-    
+  background-color: #07171a;
 }
 /*Swipe header*/
 #swipe > div > h1 {
-    padding-right: 70vh;
-    padding-left: 84vh;
+  padding-right: 70vh;
+  padding-left: 84vh;
 }
 
 /* swipe text */
 #swipe > .flex > #swipeText > p {
-    padding: 0vh 10vh 10vh 13vh;
-
+  padding: 0vh 10vh 10vh 13vh;
 }
 
 /* swipe image */
-#swipe > .flex > #swipePic >img {
-    padding: 7vh 10vh 30vh 27vh;
-    margin: 0%;
-   
+#swipe > .flex > #swipePic > img {
+  padding: 7vh 10vh 30vh 27vh;
+  margin: 0%;
 }
 
-
 #create {
-    background-color: #040C0E;
-    }
+  background-color: #040c0e;
+}
 
 /*create header*/
 #create > .flex > #createText > h1 {
-    padding-left: 10vh;
-    padding-bottom: 0%;
-    
+  padding-left: 10vh;
+  padding-bottom: 0%;
 }
 
 /* create text */
 #create > .flex > #createText > p {
-    padding: 0vh 0vh 30vh 33vh;
-    
+  padding: 0vh 0vh 30vh 33vh;
 }
 
 /* create image */
-#create > .flex > #album >img {
-    padding: 30vh 10vh 30vh 10vh;
-    margin: 0%;
-   
+#create > .flex > #album > img {
+  padding: 30vh 10vh 30vh 10vh;
+  margin: 0%;
 }
 
-
-
-
-
 #discover {
-    background-color: #07171A;
+  background-color: #07171a;
 }
 
 #discover > h1 {
-    padding-left:70vh ;
+  padding-left: 70vh;
 }
 
 #discover > .flex > p {
-    padding-right: 8vh;
+  padding-right: 8vh;
 }
 
-#discover > .flex > img{
-    padding: 10vh 8vh 10vh 10vh;
+#discover > .flex > img {
+  padding: 10vh 8vh 10vh 10vh;
 }
-

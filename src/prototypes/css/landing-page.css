@@ -26,10 +26,6 @@ body {
   }
 }
 
-img {
-  max-width: 100%;
-}
-
 p {
   font-weight: 300;
 }
@@ -119,14 +115,22 @@ a {
 
 /*phones image*/
 #main > .flex > #phones > img {
-  padding: 16vh 13vh 19vh 10vh;
+  width: 100%;
+}
+
+#main > #mainCentre {
+  padding-top: 10vh;
+}
+
+#main > nav > .flex > #phones {
+  border: 16vh 13vh 19vh 10vh;
 }
 
 /* slogan */
 #main > .flex > #slogan {
   margin-right: 15vh;
   padding-bottom: 20vh;
-  padding-top: 10vh;
+  /* padding-top: 10vh; */
 }
 #main > .flex > #slogan > #filler1 {
   background-color: #6792895a;
@@ -187,12 +191,12 @@ a {
 
 /* create text */
 #create > .flex > #createText > p {
-  padding: 0vh 0vh 30vh 33vh;
+  padding: 0vh 0vh 30vh 43vh;
 }
 
 /* create image */
 #create > .flex > #album > img {
-  padding: 60vh 10vh 30vh 10vh;
+  padding: 60vh 00vh 30vh 0vh;
   margin: 0%;
 }
 

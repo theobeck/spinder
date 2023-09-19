@@ -3,7 +3,7 @@ import Hjertehjarte from '../../assets/Hjertehjarte.png';
 import Back from '../../assets/Back.png';
 import './index.css';
 import { Link } from 'react-router-dom';
-import {Song, SpotifyAPI} from '../../authentication.ts';
+import { Song, SpotifyAPI } from '../../authentication.ts';
 import { useQuery } from 'react-query';
 import { useEffect, useState } from 'react';
 
@@ -44,9 +44,9 @@ export default function PlayPage() {
     <div className="wrapper">
       {songQuery.data && songQuery.data.items ? (
         songQuery.data.items
-          .filter((song: {track: Song}) => !ratedSongIds.includes(song.track.id))
+          .filter((song: { track: Song }) => !ratedSongIds.includes(song.track.id))
           .slice(0, 1)
-          .map((song: {track: Song}) => (
+          .map((song: { track: Song }) => (
             <PlayPageSong
               albumCover={song.track.album.images[0].url}
               key={song.track.id}

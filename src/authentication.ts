@@ -1,14 +1,19 @@
+export type Image = { url: string };
+export type Artist = { name: string };
+
+const SOURCE_PLAYLIST = '37i9dQZF1E39mMy1G56U5M';
+
 export type User = {
   display_name: string;
   email: string;
-  images: { url: string }[];
+  images: Image[];
 };
 
 export type Song = {
   id: string;
   name: string;
-  artists: { name: string }[];
-  album: { name: string; images: { url: string }[] };
+  artists: Artist[];
+  album: { name: string; images: Image[] };
   duration_ms: number;
 };
 
@@ -24,7 +29,7 @@ export class SpotifyAPI {
   public static getAuthorization(): SpotifyAPI | null {
     const storedAuth = sessionStorage.getItem('authentication');
     if (storedAuth) {
-      console.log("I AM STORED")
+      console.log('I AM STORED');
       const auth = JSON.parse(storedAuth);
       const access_token = auth.access_token;
       const expires = auth.expires;
@@ -41,41 +46,53 @@ export class SpotifyAPI {
     return null;
   }
 
-  public async getUser(): Promise<User | null> {
-    const response = await fetch('https://api.spotify.com/v1/me', {
+  private async apiCall(endpoint: string, params?: string): Promise<any> {
+    const response = await fetch(`${endpoint}${params || ''}`, {
       headers: {
-        Authorization: 'Bearer ' + this.access_token,
+        Authorization: `Bearer ${this.access_token}`,
       },
     });
 
-    if (response.status === 200) return (await response.json()) as User;
-    return null;
+    if (!response.ok) {
+      throw new Error('API call failed');
+    }
+
+    return response.json();
+  }
+
+  public async getUser(): Promise<User | null> {
+    try {
+      return (await this.apiCall('https://api.spotify.com/v1/me')) as User;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 
   public async getSongs(): Promise<{ items: { track: Song }[] } | null> {
-    const response = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1E39mMy1G56U5M/tracks', {
-      headers: {
-        Authorization: 'Bearer ' + this.access_token,
-      },
-    });
-
-    if (response.status === 200) return (await response.json()) as { items: { track: Song }[] };
-    return null;
+    try {
+      return (await this.apiCall(`https://api.spotify.com/v1/playlists/${SOURCE_PLAYLIST}/tracks`)) as {
+        items: { track: Song }[];
+      };
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 
   public async getSongInfo(songIDs: string[]): Promise<{ tracks: Song[] } | null> {
-    const response = await fetch('https://api.spotify.com/v1/tracks?ids=' + songIDs.join(','), {
-      headers: {
-        Authorization: 'Bearer ' + this.access_token,
-      },
-    });
-
-    if (response.status === 200) return (await response.json()) as { tracks: Song[] };
-    return null;
+    try {
+      return (await this.apiCall('https://api.spotify.com/v1/tracks', `?ids=${songIDs.join(',')}`)) as {
+        tracks: Song[];
+      };
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 
   public logout() {
-    sessionStorage.removeItem('authorization');
+    sessionStorage.removeItem('authentication');
     window.location.href = '/';
   }
 }

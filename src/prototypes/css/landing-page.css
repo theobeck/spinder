@@ -10,6 +10,10 @@ footer {
 
 body {
   margin: 0%;
+  background-image: url(../img/Landing-background2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -69,7 +73,7 @@ a {
 }
 
 #main {
-  background-color: #071e22;
+  /* background-color: #071e22; */
   padding-bottom: 5%;
 }
 
@@ -98,9 +102,10 @@ a {
 
 /*phones image*/
 #main > .flex > #phones > img {
-  padding: 25vh 13vh 19vh 25vh;
+  padding: 16vh 13vh 19vh 25vh;
 }
 
+/* slogan */
 #main > .flex > #slogan {
   margin-right: 15vh;
   padding-bottom: 20vh;
@@ -132,9 +137,9 @@ a {
   margin: 0%;
 }
 
-#swipe {
+/* #swipe {
   background-color: #07171a;
-}
+} */
 /*Swipe header*/
 #swipe > div > h1 {
   padding-right: 70vh;
@@ -152,9 +157,9 @@ a {
   margin: 0%;
 }
 
-#create {
+/* #create {
   background-color: #040c0e;
-}
+} */
 
 /*create header*/
 #create > .flex > #createText > h1 {
@@ -173,9 +178,9 @@ a {
   margin: 0%;
 }
 
-#discover {
+/* #discover {
   background-color: #07171a;
-}
+} */
 
 #discover > h1 {
   padding-left: 70vh;

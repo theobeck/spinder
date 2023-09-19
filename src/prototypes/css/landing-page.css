@@ -16,6 +16,20 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 1068px) {
+  #main > .flex > #phones > img {
+    visibility: hidden;
+  }
+  #main > .flex > #slogan {
+    width: 100%;
+    padding: 0%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
 p {
   font-weight: 300;
 }
@@ -42,9 +56,12 @@ a {
   color: aliceblue;
 }
 
+.object-contain {
+  object-fit: contain;
+}
+
 .flex {
   display: flex;
-  position: relative;
   flex-wrap: nowrap;
 }
 
@@ -102,7 +119,7 @@ a {
 
 /*phones image*/
 #main > .flex > #phones > img {
-  padding: 16vh 13vh 19vh 25vh;
+  padding: 16vh 13vh 19vh 10vh;
 }
 
 /* slogan */
@@ -164,6 +181,7 @@ a {
 /*create header*/
 #create > .flex > #createText > h1 {
   padding-left: 10vh;
+  padding-top: 65vh;
   padding-bottom: 0%;
 }
 
@@ -174,7 +192,7 @@ a {
 
 /* create image */
 #create > .flex > #album > img {
-  padding: 30vh 10vh 30vh 10vh;
+  padding: 60vh 10vh 30vh 10vh;
   margin: 0%;
 }
 

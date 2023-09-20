@@ -10,20 +10,6 @@ footer {
 
 body {
   margin: 0%;
-  background-image: url(../img/Landing-background2.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 1068px) {
-  #main > .flex > #phones > img {
-    visibility: hidden;
-  }
-  #main > .flex > #slogan {
-    width: 100%;
-    padding: 0%;
-  }
 }
 
 p {
@@ -52,12 +38,9 @@ a {
   color: aliceblue;
 }
 
-.object-contain {
-  object-fit: contain;
-}
-
 .flex {
   display: flex;
+  position: relative;
   flex-wrap: nowrap;
 }
 
@@ -86,7 +69,7 @@ a {
 }
 
 #main {
-  /* background-color: #071e22; */
+  background-color: #071e22;
   padding-bottom: 5%;
 }
 
@@ -97,14 +80,20 @@ a {
 
 /* headding */
 #main > nav > .flex > h1 {
-    margin-top: 2.5vh;
-    margin-right: 30%;
-    font-size: 6vh;
+  margin-top: 2.5vh;
+  margin-right: 30%;
+  font-size: 6vh;
 }
 
 /* login button */
-#main > nav > div > button {
-  margin-top: 3vh;
+#log-in {
+  font: bold 11px Arial;
+  text-decoration: none;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+  margin-top: 6vh;
   align-self: flex-end;
   background-color: #679289;
   padding: 2vh 7vh;
@@ -115,22 +104,13 @@ a {
 
 /*phones image*/
 #main > .flex > #phones > img {
-  width: 100%;
+  padding: 25vh 13vh 19vh 25vh;
 }
 
-#main > #mainCentre {
-  padding-top: 10vh;
-}
-
-#main > nav > .flex > #phones {
-  border: 16vh 13vh 19vh 10vh;
-}
-
-/* slogan */
 #main > .flex > #slogan {
   margin-right: 15vh;
   padding-bottom: 20vh;
-  /* padding-top: 10vh; */
+  padding-top: 10vh;
 }
 #main > .flex > #slogan > #filler1 {
   background-color: #6792895a;
@@ -158,9 +138,9 @@ a {
   margin: 0%;
 }
 
-/* #swipe {
+#swipe {
   background-color: #07171a;
-} */
+}
 /*Swipe header*/
 #swipe > div > h1 {
   padding-right: 70vh;
@@ -178,31 +158,30 @@ a {
   margin: 0%;
 }
 
-/* #create {
+#create {
   background-color: #040c0e;
-} */
+}
 
 /*create header*/
 #create > .flex > #createText > h1 {
   padding-left: 10vh;
-  padding-top: 65vh;
   padding-bottom: 0%;
 }
 
 /* create text */
 #create > .flex > #createText > p {
-  padding: 0vh 0vh 30vh 43vh;
+  padding: 0vh 0vh 30vh 33vh;
 }
 
 /* create image */
 #create > .flex > #album > img {
-  padding: 60vh 00vh 30vh 0vh;
+  padding: 30vh 10vh 30vh 10vh;
   margin: 0%;
 }
 
-/* #discover {
+#discover {
   background-color: #07171a;
-} */
+}
 
 #discover > h1 {
   padding-left: 70vh;

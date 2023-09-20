@@ -4,12 +4,102 @@ html {
   color: aliceblue;
 }
 
-footer {
-  background-color: #040c0e;
-}
-
 body {
   margin: 0%;
+  width: fit-content;
+}
+
+@media (max-width: 1068px) {
+  #main > .flex > #phones > img {
+    visibility: hidden;
+  }
+  #main > .flex > #slogan {
+    width: 100%;
+    justify-content: center;
+    padding: 0%;
+  }
+}
+
+@media (max-width: 1168px) {
+  /*Swipe header*/
+  #swipe > #swipeHead > .header {
+    padding: 20vh 0vh 0vh 0vh;
+  }
+
+  #swipe > .swipeDiv {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  /* swipe text */
+  #swipe > .flex > #swipeText > .text {
+    margin: 0;
+    padding: 5vh 5vh 30vh 5vh !important;
+    width: 100%;
+  }
+
+  /* swipe image */
+  #swipe > #swipeFlex > #PicDiv > #swipePic {
+    padding: 0% !important;
+    display: block;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1168px) {
+  /*Create */
+
+  #create > .flex {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  /* create text */
+  #create > .flex > #createText > .text {
+    margin: 0;
+    width: 100%;
+    padding: 10vh 0vh 10vh 0vh !important;
+  }
+
+  /* create image */
+  #create > .flex > #album > #songs {
+    padding: 0% !important;
+    display: block;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1168px) {
+  /*Create */
+
+  #discover > .flex {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  /* create text */
+  #discover > .flex > .text {
+    margin: 0;
+    width: 100%;
+    padding: 20vh 5vh 40vh 5vh !important;
+  }
+
+  /* display image */
+  #discover > .flex > #albums {
+    display: none;
+  }
+
+  #discover > .header {
+    padding: 20vh 0vh 0vh 0vh !important;
+  }
 }
 
 .text {
@@ -22,6 +112,10 @@ body {
 
 .p90 {
   font-size: 90pt;
+}
+
+.object-contain {
+  object-fit: contain;
 }
 
 .header {
@@ -66,7 +160,10 @@ body {
 
 #main {
   background-color: #071e22;
-  padding-bottom: 5%;
+}
+
+#main > #mainCentre {
+  padding-top: 10vh;
 }
 
 /* icon bilde*/
@@ -86,29 +183,30 @@ body {
 #dummy-log-in {
   font: bold 11px Arial;
   text-decoration: none;
+  flex-wrap: nowrap;
   border-top: 1px solid #cccccc;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #cccccc;
-  margin-top: 6vh;
   align-self: flex-end;
   background-color: #679289;
   padding: 2vh 7vh;
-  border-radius: 40px;
-  font-size: 30px;
+  border-radius: 35px;
+  font-size: 25px;
   color: aliceblue;
   cursor: pointer;
 }
 
 /*phones image*/
 #main > .flex > #phones > #phonePic {
-  padding: 25vh 13vh 19vh 25vh;
+  width: 80%;
+  padding-left: 10vh;
 }
 
 #main > .flex > #slogan {
   margin-right: 15vh;
   padding-bottom: 20vh;
-  padding-top: 10vh;
+  /* padding-top: 10vh; */
 }
 #main > .flex > #slogan > #filler1 {
   background-color: #6792895a;
@@ -135,6 +233,7 @@ body {
 #swipe {
   background-color: #07171a;
 }
+
 /*Swipe header*/
 #swipe > .swipeDiv > .header {
   padding-right: 70vh;
@@ -147,13 +246,14 @@ body {
 }
 
 /* swipe image */
-#swipe > .flex > #swipePic > #swipe {
+#swipe > #swipeFlex > #PicDiv > #swipePic {
   padding: 7vh 10vh 30vh 27vh;
   margin: 0%;
 }
 
 #create {
   background-color: #040c0e;
+  padding-top: 20vh;
 }
 
 /*create header*/
@@ -164,12 +264,12 @@ body {
 
 /* create text */
 #create > .flex > #createText > .text {
-  padding: 0vh 0vh 30vh 33vh;
+  padding: 0vh 0vh 30vh 43vh;
 }
 
 /* create image */
 #create > .flex > #album > #songs {
-  padding: 30vh 10vh 30vh 10vh;
+  padding: 10vh 4vh 30vh 5vh;
   margin: 0%;
 }
 

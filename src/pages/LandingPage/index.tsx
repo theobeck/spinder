@@ -5,7 +5,6 @@ import SongList from '../../assets/Song list.png';
 import Album from '../../assets/album.png';
 import './index.css';
 import React from 'react';
-import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 import {SpotifyAPI, storeAuthorization} from "../../utils/authentication.ts";
 
@@ -32,26 +31,26 @@ export default function LandingPage() {
       <div id="main" className="m-null">
         <nav id='navBar' className="flex relative sp-b">
           <div className="flex">
-            <img id='logo' src={Platespiller} alt="logo" height="50vh" />
+            <img id='logo' src={Platespiller} alt="logo" height="83vh" />
             <h1 className='header'>Spinder</h1>
           </div>
 
-          <div>
-            <Link id="log-in" to={login_url}>
+          <div className="flex object-contain relative " >
+            <Link className="flex object-contain relative " id="log-in" to={login_url}>
               Log in
             </Link>
-            <a id="dummy-log-in" onClick={dummy_sign_in}>
+            <a className="flex object-contain relative "  id="dummy-log-in" onClick={dummy_sign_in}>
                 Bruk som gjest
             </a>
           </div>
         </nav>
 
-        <div className="flex sp-a ">
+        <div className="flex relative sp-b object-contain" id="mainCentre">
           <div id="phones">
-            <img id="phonePic" src={Phones} alt="phones" height="447vh" />
+            <img className="object-contain" id="phonePic" src={Phones} alt="phones" height="540vh" />
           </div>
 
-          <div id="slogan" className="relative flex">
+          <div id="slogan" className="relative flex object-contain">
             <div id="textbox">
               <a className='links' href="#swipe">Swipe</a>
               <p className='text'>millions of different songs</p>
@@ -68,17 +67,18 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div id="swipe" className="m-null">
+      <div id="swipe" className="m-null ">
+
         <div id="swipeHead" className='swipeDiv'>
           <h1 className="m-null p90 pt-25 header">Swipe</h1>
         </div>
 
-        <div className="flex sp-a swipeDiv">
-          <div id="swipePic">
-            <img id="swipe" src={SwipePic} alt="swipe example" />
+        <div id="swipeFlex" className="flex sp-b contain-object swipeDiv">
+          <div id="PicDiv">
+            <img id="swipePic" src={SwipePic} alt="swipe edxample" />
           </div>
 
-          <div id="swipeText" className='swipeDiv'>
+          <div id="swipeText" className='flex swipeDiv'>
             <p className="m-null p20 text">
               Spotify's vast library and give your favorite songs the recognition they deserve. Swipe right if you love
               it, left if you don't, and create your unique music ranking.
@@ -90,7 +90,7 @@ export default function LandingPage() {
       <div id="create" className="m-null">
         <div className="flex sp-a">
           <div id="createText">
-            <h1 className="m-null p90 pt-25 pb-10 header">Create</h1>
+            <h1 className="m-null p90 pb-10 header">Create</h1>
             <p className="m-null p20 text">
               a personalized playlist tailored to your musical taste. Our intuitive platform analyzes your ranked songs
               to help you curate the perfect playlist, making your listening experience a little more personal and
@@ -114,7 +114,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 }

@@ -3,8 +3,9 @@ import './index.css';
 import { Link } from 'react-router-dom';
 import { Song, SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PlayPageSong from "../../components/SongDisplay";
+import {getRatedSongs, rateSong} from "../../utils/favoriteSongs.ts";
 
 export type SongRating = {
   songId: string;
@@ -15,12 +16,9 @@ export default function PlayPage() {
   const spotify = SpotifyAPI.getAuthorization()!;
 
   const songQuery = useQuery('song', () => spotify.getSongs());
-  const [ratedSongs, setRatedSongs] = useState<SongRating[]>(JSON.parse(localStorage.getItem('ratedSongs') ?? '[]'));
+  const [ratedSongs, setRatedSongs] = useState<SongRating[]>(getRatedSongs());
   const ratedSongIds = ratedSongs.map((song) => song.songId);
 
-  useEffect(() => {
-    localStorage.setItem('ratedSongs', JSON.stringify(ratedSongs));
-  }, [ratedSongs]);
   return (
     <div className="wrapper">
       {songQuery.data && songQuery.data.items ? (
@@ -34,7 +32,8 @@ export default function PlayPage() {
               title={song.track.name}
               artist={song.track.artists[0].name}
               onRate={(liked) => {
-                setRatedSongs([...ratedSongs, { songId: song.track.id, liked }]);
+                rateSong(song.track.id, liked);
+                setRatedSongs(getRatedSongs());
               }}
             />
           ))

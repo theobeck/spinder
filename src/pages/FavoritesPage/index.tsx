@@ -5,21 +5,18 @@ import { SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
 import { SongRating } from '../PlayPage';
 import FavoritesSongItem from "../../components/FavoriteSongItem";
+import {getRatedSongs, unlikeSong} from "../../utils/favoriteSongs.ts";
 
 export default function FavoritesPage() {
   const spotifyAPI = SpotifyAPI.getAuthorization()!;
 
-  const favoriteSongs = (JSON.parse(localStorage.getItem('ratedSongs') ?? '[]') as SongRating[]).filter(
-    (song: SongRating) => song.liked,
-  );
-
   const songQuery = useQuery(
     'song',
-    () => spotifyAPI.getSongInfo(favoriteSongs.map((song: SongRating) => song.songId)),
+    () => spotifyAPI.getSongInfo(getRatedSongs().filter(song => song.liked).map((song: SongRating) => song.songId)),
     {
-      enabled: favoriteSongs.length > 0, // Enable the query only if favoriteSongs is not empty
-    },
-  );
+      enabled: getRatedSongs().filter(song => song.liked).length > 0, // Enable the query only if favoriteSongs is not empty
+    }
+  )
 
   return (
     <>
@@ -36,6 +33,10 @@ export default function FavoritesPage() {
               title={track.name}
               artist={track.artists[0].name}
               key={track.id}
+              onUnlike={() => {
+                  unlikeSong(track.id);
+                  songQuery.refetch().then();
+              }}
             />
           ))}
       </div>

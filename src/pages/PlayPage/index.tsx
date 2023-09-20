@@ -1,29 +1,10 @@
-import XKryss from '../../assets/Xkryss.png';
-import Hjertehjarte from '../../assets/Hjertehjarte.png';
 import Back from '../../assets/Back.png';
 import './index.css';
 import { Link } from 'react-router-dom';
 import { Song, SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
 import { useEffect, useState } from 'react';
-
-function PlayPageSong(props: { albumCover: string; title: string; artist: string; onRate: (liked: boolean) => void }) {
-  return (
-    <div id="songContainer">
-      <img id="albumCover" src={props.albumCover} alt="Søt liten guttelutt" />
-      <span id="sang">{props.title}</span>
-      <span id="artist">{props.artist}</span>
-      <div id="flexContainerIcons">
-        <div className="rateButton" id="dislike" onClick={() => props.onRate(false)}>
-          <img src={XKryss} alt="X" />
-        </div>
-        <div className="rateButton" id="like" onClick={() => props.onRate(true)}>
-          <img src={Hjertehjarte} alt="<3" />
-        </div>
-      </div>
-    </div>
-  );
-}
+import PlayPageSong from "../../components/SongDisplay";
 
 export type SongRating = {
   songId: string;

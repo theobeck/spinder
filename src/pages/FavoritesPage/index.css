@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-h1 {
-  text-align: center;
-}
-h1 h2 h3 {
-  font-weight: 400;
-}
 #back {
   position: fixed;
   top: 2vh;
@@ -32,54 +26,4 @@ body {
   background-color: #222;
   opacity: 80%;
   border-radius: 2px;
-}
-
-.song-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
-}
-
-.song-item:last-of-type {
-  border-bottom: none;
-}
-
-.song-item img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-.song-details {
-  flex: 1;
-}
-
-.song-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.song-artist {
-  font-size: 14px;
-  margin: 0;
-}
-
-.song-duration {
-  font-size: 14px;
-  margin: 0;
-}
-
-.song-controls {
-  display: flex;
-  align-items: center;
-}
-
-.song-controls button {
-  background-color: transparent;
-  border: none;
-  color: #1db954;
-  font-size: 20px;
-  margin-right: 10px;
 }

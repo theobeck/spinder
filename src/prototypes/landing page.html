@@ -1,124 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Spinder</title>
-    <link rel="stylesheet" href="./css/landing-page.css">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/landing-page.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <!-- import Inter font -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="main" class="m-null">
-        <nav class="flex relative sp-b">
-            <div class="flex">
-                <img src="./img/Platespiller.png" height="83hv">
-                
-                <h1>Spinder</h1>
-                
-            </div>
-            
+      <nav class="flex relative sp-b">
+        <div class="flex">
+          <img src="./img/Platespiller.png" height="83hv" />
 
-            <div>
-                <button id="log-in">Log in</button>
-            </div>
-        </nav>
-
-        <div class="flex sp-a ">
-            <div id="phones">
-                <img src="./img/phones.png" alt="phones" height="447vh">
-            </div>
-
-            <div id="slogan" class="relative flex"> 
-                <div id="textbox">
-                    <a href="#swipe">Swipe</a>
-                    <p>millions of different songs</p>
-                    <a href="#create">Create</a>
-                    <p>playlists based on all your taste</p>
-                    <a href="#discover">Discover</a>
-                    <p>new songs along the way!</p>
-                </div>
-                
-            
-                <div id="filler1">
-
-                </div>
-
-                <div id="filler2">
-
-                </div>
-            </div>
-
-            
-
+          <h1>Spinder</h1>
         </div>
 
+        <div>
+          <button id="log-in">Log in</button>
+        </div>
+      </nav>
+
+      <div class="flex sp-b" id="mainCentre">
+        <div id="phones">
+          <img class="object-contain" src="./img/phones.png" alt="phones" height="540vh" />
+        </div>
+
+        <div id="slogan" class="relative flex object-contain ">
+          <div id="textbox">
+            <a href="#swipe">Swipe</a>
+            <p>millions of different songs</p>
+            <a href="#create">Create</a>
+            <p>playlists based on all your taste</p>
+            <a href="#discover">Discover</a>
+            <p>new songs along the way!</p>
+          </div>
+
+          <div id="filler1"></div>
+
+          <div id="filler2"></div>
+        </div>
+      </div>
     </div>
 
     <!-- swipe -->
     <div id="swipe" class="m-null">
-        <div id="swipeHead">
-            <h1 class="m-null p90 pt-25">Swipe</h1>
-        </div>
-        
-        <div class="flex sp-a">
-            <div id="swipePic">
-                <img src="./img/swipePic.png" alt="swipe example">
-            </div>
+      <div id="swipeHead">
+        <h1 class="m-null p90 pt-25">Swipe</h1>
+      </div>
 
-            <div id="swipeText" > 
-                    <p class="m-null p20"> 
-                        Spotify's vast library and give your favorite songs the recognition they deserve. Swipe right if you love it, left if you don't, and create your unique music ranking.
-                    </p>
-                    
-                
-            </div>
+      <div class="flex sp-a">
+        <div id="swipePic">
+          <img src="./img/swipePic.png" alt="swipe example" />
         </div>
+
+        <div id="swipeText">
+          <p class="m-null p20">
+            Spotify's vast library and give your favorite songs the recognition they deserve. Swipe right if you love
+            it, left if you don't, and create your unique music ranking.
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <div id = "create" class="m-null">
 
-        
-        <div class="flex sp-a" href="#create-link">
-            <div id="createText" >
-                <h1 class="m-null p90 pt-25 pb-10">Create</h1> 
-                <p class="m-null p20"> 
-                    a personalized playlist tailored to your  musical taste. Our intuitive platform analyzes your ranked songs to help you curate the perfect playlist, making your listening experience a little more personal and special.
-                </p>
+    <div id="create" class="m-null">
+      <div class="flex sp-a" href="#create-link">
+        <div id="createText">
+          <h1 class="m-null p90 pb-10">Create</h1>
+          <p class="m-null p20">
+            a personalized playlist tailored to your musical taste. Our intuitive platform analyzes your ranked songs to
+            help you curate the perfect playlist, making your listening experience a little more personal and special.
+          </p>
         </div>
-            <div id="album">
-                <img src="./img/Song list.png" alt="songs" height="690vh">
-            </div>
-
-            
+        <div id="album">
+          <img src="./img/Song list.png" alt="songs" height="690vh" />
         </div>
+      </div>
     </div>
-    
+
     <div id="discover">
-        <h1 class="m-null p90 pt-25 ">Discover</h1> 
-        <div class="flex sp-a">
-            <img src="./img/album.png" alt="albums" height="590vh">   
+      <h1 class="m-null p90 pt-25">Discover</h1>
+      <div class="flex sp-a">
+        <img src="./img/album.png" alt="albums" height="590vh" />
 
-            <p class="m-null p20"> 
-                    hidden gems and uncover the latest hits from Spotify's extensive music catalog. Our algorithm uses your preferences to recommend new songs and artists you're sure to adore
-            </p>
-           
-                   
-            
-        </div>
+        <p class="m-null p20">
+          hidden gems and uncover the latest hits from Spotify's extensive music catalog. Our algorithm uses your
+          preferences to recommend new songs and artists you're sure to adore
+        </p>
+      </div>
     </div>
-       
-</body>
+  </body>
 
-<footer>
-    <div>
-        <p>jfdjs</p>
+  <footer class="m-null pb-10">
+      <p>jfdjs</p>
     </div>
-</footer>
-
+  </footer>
 </html>

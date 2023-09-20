@@ -1,0 +1,6 @@
+.back-button {
+  position: absolute;
+  top: 2.5vh;
+  left: 2.5vh;
+  cursor: pointer;
+}

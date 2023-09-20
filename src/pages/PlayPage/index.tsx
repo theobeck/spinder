@@ -1,11 +1,10 @@
-import Back from '../../assets/Back.png';
 import './index.css';
-import { Link } from 'react-router-dom';
 import { Song, SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
 import { useState } from 'react';
 import PlayPageSong from "../../components/SongDisplay";
 import {getRatedSongs, rateSong} from "../../utils/favoriteSongs.ts";
+import BackButton from "../../components/BackButton";
 
 export type SongRating = {
   songId: string;
@@ -40,9 +39,7 @@ export default function PlayPage() {
       ) : (
         <></>
       )}
-      <Link to="/">
-        <img id="back" src={Back} alt="<" />
-      </Link>
+      <BackButton/>
     </div>
   );
 }

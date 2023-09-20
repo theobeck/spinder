@@ -1,0 +1,25 @@
+.track-detail-container {
+  width: 100vw;
+  text-align: center;
+}
+
+.track-details {
+  margin-top: 50px;
+}
+
+.track-details img {
+  width: 60vh;
+}
+
+.track-details .track-details-name {
+  font-size: 2em;
+}
+
+.track-details-link {
+  color: white;
+  text-decoration: none;
+  background-color: #1db954;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}

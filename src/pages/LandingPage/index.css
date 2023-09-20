@@ -86,7 +86,8 @@ a {
 }
 
 /* login button */
-#log-in {
+#log-in,
+#dummy-log-in {
   font: bold 11px Arial;
   text-decoration: none;
   border-top: 1px solid #cccccc;
@@ -100,6 +101,7 @@ a {
   border-radius: 40px;
   font-size: 30px;
   color: aliceblue;
+  cursor: pointer;
 }
 
 /*phones image*/

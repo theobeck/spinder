@@ -3,7 +3,7 @@ import Hjertehjarte from '../../assets/Hjertehjarte.png';
 import Back from '../../assets/Back.png';
 import './index.css';
 import { Link } from 'react-router-dom';
-import { Song, SpotifyAPI } from '../../authentication.ts';
+import { Song, SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
 import { useEffect, useState } from 'react';
 

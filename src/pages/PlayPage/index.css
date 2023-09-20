@@ -27,18 +27,20 @@ body {
   flex-wrap: nowrap;
   justify-content: space-around;
   position: absolute;
-  height: 50vh;
-  top: 22vh;
-  width: 25vw;
+  height: 650px;
+  top: 150px;
+  width: 325px;
   color: white;
   font-size: 28px;
+  text-align: center;
 }
 
 #flexContainerIcons {
   display: flex;
-  width: 75%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 #like {

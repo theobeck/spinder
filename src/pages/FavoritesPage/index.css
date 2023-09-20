@@ -6,6 +6,7 @@
   left: 1.5vw;
   height: 7vh;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #121212;
@@ -18,12 +19,27 @@ body {
   background-repeat: repeat;
 }
 
+#search {
+  padding: 1vh;
+  margin: 0 25vh;
+  display: flex;
+}
+
 .song-list {
   width: 70%;
   margin: 0px auto;
-  margin-top: 10%;
+  margin-top: 5%;
   padding: 10px;
   background-color: #222;
   opacity: 80%;
   border-radius: 2px;
+}
+
+#header {
+  font-weight: 400;
+  font-size: 90px;
+}
+
+#song-list-search {
+  margin-left: 0;
 }

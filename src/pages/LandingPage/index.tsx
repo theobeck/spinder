@@ -70,7 +70,7 @@ export default function LandingPage() {
       <div id="swipe" className="m-null ">
 
         <div id="swipeHead" className='swipeDiv'>
-          <h1 className="m-null p90 pt-25 header">Swipe</h1>
+          <h1 className="m-null p90 header">Swipe</h1>
         </div>
 
         <div id="swipeFlex" className="flex sp-b contain-object swipeDiv">
@@ -104,7 +104,7 @@ export default function LandingPage() {
       </div>
 
       <div id="discover">
-        <h1 className="m-null p90 pt-25 header">Discover</h1>
+        <h1 className="m-null p90 header">Discover</h1>
         <div className="flex sp-a">
           <img id='albums' src={Album} alt="albums" height="590vh" />
           <p className="m-null p20 text">

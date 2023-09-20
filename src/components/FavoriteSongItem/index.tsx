@@ -20,7 +20,7 @@ export default function FavoritesSongItem(props: FavoriteSongItemProps) {
                 <p className="song-artist">{props.artist}</p>
             </div>
             <div className="song-options">
-                <button className="song-unlike-button" onClick={props.onUnlike}>🗙</button>
+                <button className="song-unlike-button" onClick={props.onUnlike}>X</button>
             </div>
         </div>
     );

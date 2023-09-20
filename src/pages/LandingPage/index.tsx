@@ -17,7 +17,9 @@ export default function LandingPage() {
     '&scope=' +
     encodeURIComponent('user-read-private user-read-email') +
     '&redirect_uri=' +
-    encodeURIComponent('http://localhost:5173/callback') +
+    encodeURIComponent(window.location.host === "it2810-13.idi.ntnu.no" ?
+        "http://it2810-13.idi.ntnu.no/callback" :
+        "http://localhost:5173/callback") +
     '&show_dialog=true';
 
   function dummy_sign_in() {

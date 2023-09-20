@@ -47,3 +47,12 @@
   font-size: 20px;
   margin-right: 10px;
 }
+
+.song-unlike-button {
+  color: #ff0000;
+  background-color: transparent;
+  border: none;
+  font-size: 3em;
+  margin-right: 10px;
+  cursor: pointer;
+}

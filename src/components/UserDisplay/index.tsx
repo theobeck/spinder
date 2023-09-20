@@ -5,13 +5,13 @@ import './index.css';
 export default function UserDisplay() {
   const authorization = SpotifyAPI.getAuthorization!();
 
-  const userQuery = useQuery('user', () => authorization.getUser());
+  const userQuery = useQuery('user', () => authorization?.getUser());
 
   return (
     <div className="user-display">
       {userQuery.data ? (
         <div id="userContainer">
-          <button id="logoutButton" onClick={() => authorization.logout()}>
+          <button id="logoutButton" onClick={() => authorization?.logout()}>
             Logout
           </button>
           <span id="userName">{userQuery.data.display_name}</span>

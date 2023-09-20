@@ -18,13 +18,13 @@ export default function LandingPage() {
     encodeURIComponent('user-read-private user-read-email') +
     '&redirect_uri=' +
     encodeURIComponent(window.location.host === "it2810-13.idi.ntnu.no" ?
-        "http://it2810-13.idi.ntnu.no/callback" :
+        "http://it2810-13.idi.ntnu.no/project1/callback" :
         "http://localhost:5173/callback") +
     '&show_dialog=true';
 
   function dummy_sign_in() {
     storeAuthorization(SpotifyAPI.getDummyAuthorization());
-    window.location.href = '/';
+    window.location.href = window.location.href.replace(/\/[^/]*$/, '');
   }
 
   return (

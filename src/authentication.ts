@@ -102,7 +102,8 @@ export class SpotifyAPI {
 
   public logout() {
     sessionStorage.removeItem('authentication');
-    window.location.href = '/';
+    // remove everything after last /
+    window.location.href = window.location.href.replace(/\/[^/]*$/, '');
   }
 }
 

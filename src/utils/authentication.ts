@@ -15,6 +15,7 @@ export type Song = {
   artists: Artist[];
   album: { name: string; images: Image[] };
   duration_ms: number;
+  uri: string;
 };
 
 export class SpotifyAPI {
@@ -72,6 +73,15 @@ export class SpotifyAPI {
   public async getUser(): Promise<User | null> {
     try {
       return (await this.apiCall('https://api.spotify.com/v1/me')) as User;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  }
+
+  public async getTrack(trackID: string): Promise<Song | null> {
+    try {
+      return (await this.apiCall(`https://api.spotify.com/v1/tracks/${trackID}`)) as Song;
     } catch (error) {
       console.error(error);
       return null;

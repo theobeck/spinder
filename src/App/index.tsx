@@ -7,6 +7,7 @@ import MainPage from '../pages/MainPage';
 import FavoritesPage from '../pages/FavoritesPage';
 import PlayPage from '../pages/PlayPage';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import TrackDetailPage from "../pages/TrackDetailPage";
 
 export default function App() {
   const authorization = SpotifyAPI.getAuthorization();
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="/play" element={<PlayPage />} />
+            <Route path="/track/:trackId" element={<TrackDetailPage />} />
             <Route path="/playlists" element={<h1>TODO</h1>} />
             <Route path="/settings" element={<h1>TODO</h1>} />
           </Routes>

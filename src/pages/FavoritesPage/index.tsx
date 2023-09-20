@@ -54,6 +54,7 @@ export default function FavoritesPage() {
               albumCover={track.album.images[0].url}
               title={track.name}
               artist={track.artists[0].name}
+              key={track.id}
             />
           ))}
       </div>

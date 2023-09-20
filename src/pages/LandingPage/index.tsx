@@ -30,10 +30,10 @@ export default function LandingPage() {
   return (
     <>
       <div id="main" className="m-null">
-        <nav className="flex relative sp-b">
+        <nav id='navBar' className="flex relative sp-b">
           <div className="flex">
-            <img src={Platespiller} alt="logo" height="50vh" />
-            <h1>Spinder</h1>
+            <img id='logo' src={Platespiller} alt="logo" height="50vh" />
+            <h1 className='header'>Spinder</h1>
           </div>
 
           <div>
@@ -48,17 +48,17 @@ export default function LandingPage() {
 
         <div className="flex sp-a ">
           <div id="phones">
-            <img src={Phones} alt="phones" height="447vh" />
+            <img id="phonePic" src={Phones} alt="phones" height="447vh" />
           </div>
 
           <div id="slogan" className="relative flex">
             <div id="textbox">
-              <a href="#swipe">Swipe</a>
-              <p>millions of different songs</p>
-              <a href="#create">Create</a>
-              <p>playlists based on all your taste</p>
-              <a href="#discover">Discover</a>
-              <p>new songs along the way!</p>
+              <a className='links' href="#swipe">Swipe</a>
+              <p className='text'>millions of different songs</p>
+              <a className='links' href="#create">Create</a>
+              <p className='text'>playlists based on all your taste</p>
+              <a className='links' href="#discover">Discover</a>
+              <p className='text'>new songs along the way!</p>
             </div>
 
             <div id="filler1"></div>
@@ -69,17 +69,17 @@ export default function LandingPage() {
       </div>
 
       <div id="swipe" className="m-null">
-        <div id="swipeHead">
-          <h1 className="m-null p90 pt-25">Swipe</h1>
+        <div id="swipeHead" className='swipeDiv'>
+          <h1 className="m-null p90 pt-25 header">Swipe</h1>
         </div>
 
-        <div className="flex sp-a">
+        <div className="flex sp-a swipeDiv">
           <div id="swipePic">
-            <img src={SwipePic} alt="swipe example" />
+            <img id="swipe" src={SwipePic} alt="swipe example" />
           </div>
 
-          <div id="swipeText">
-            <p className="m-null p20">
+          <div id="swipeText" className='swipeDiv'>
+            <p className="m-null p20 text">
               Spotify's vast library and give your favorite songs the recognition they deserve. Swipe right if you love
               it, left if you don't, and create your unique music ranking.
             </p>
@@ -90,24 +90,24 @@ export default function LandingPage() {
       <div id="create" className="m-null">
         <div className="flex sp-a">
           <div id="createText">
-            <h1 className="m-null p90 pt-25 pb-10">Create</h1>
-            <p className="m-null p20">
+            <h1 className="m-null p90 pt-25 pb-10 header">Create</h1>
+            <p className="m-null p20 text">
               a personalized playlist tailored to your musical taste. Our intuitive platform analyzes your ranked songs
               to help you curate the perfect playlist, making your listening experience a little more personal and
               special.
             </p>
           </div>
           <div id="album">
-            <img src={SongList} alt="songs" height="690vh" />
+            <img id='songs' src={SongList} alt="songs" height="690vh" />
           </div>
         </div>
       </div>
 
       <div id="discover">
-        <h1 className="m-null p90 pt-25 ">Discover</h1>
+        <h1 className="m-null p90 pt-25 header">Discover</h1>
         <div className="flex sp-a">
-          <img src={Album} alt="albums" height="590vh" />
-          <p className="m-null p20">
+          <img id='albums' src={Album} alt="albums" height="590vh" />
+          <p className="m-null p20 text">
             hidden gems and uncover the latest hits from Spotify's extensive music catalog. Our algorithm uses your
             preferences to recommend new songs and artists you're sure to adore
           </p>

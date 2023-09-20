@@ -12,7 +12,7 @@ body {
   margin: 0%;
 }
 
-p {
+.text {
   font-weight: 300;
 }
 
@@ -24,15 +24,11 @@ p {
   font-size: 90pt;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.header {
   font-weight: 400;
 }
 
-h2,
-a {
+.links {
   font-size: 50pt;
   text-decoration: none;
   color: aliceblue;
@@ -74,12 +70,12 @@ a {
 }
 
 /* icon bilde*/
-#main > nav > .flex > img {
+#logo {
   padding: 2vh 2vh;
 }
 
 /* headding */
-#main > nav > .flex > h1 {
+#main > #navBar > .flex > .header {
   margin-top: 2.5vh;
   margin-right: 30%;
   font-size: 6vh;
@@ -105,7 +101,7 @@ a {
 }
 
 /*phones image*/
-#main > .flex > #phones > img {
+#main > .flex > #phones > #phonePic {
   padding: 25vh 13vh 19vh 25vh;
 }
 
@@ -130,11 +126,7 @@ a {
   border-radius: 40px 0px 0px 40px;
 }
 
-#main > .flex > #slogan h2 {
-  margin: 0%;
-}
-
-#main > .flex > #slogan p {
+#main > .flex > #slogan .text {
   padding-bottom: 5vh;
   padding-left: 8vh;
   margin: 0%;
@@ -144,18 +136,18 @@ a {
   background-color: #07171a;
 }
 /*Swipe header*/
-#swipe > div > h1 {
+#swipe > .swipeDiv > .header {
   padding-right: 70vh;
   padding-left: 84vh;
 }
 
 /* swipe text */
-#swipe > .flex > #swipeText > p {
+#swipe > .flex > #swipeText > .text {
   padding: 0vh 10vh 10vh 13vh;
 }
 
 /* swipe image */
-#swipe > .flex > #swipePic > img {
+#swipe > .flex > #swipePic > #swipe {
   padding: 7vh 10vh 30vh 27vh;
   margin: 0%;
 }
@@ -165,18 +157,18 @@ a {
 }
 
 /*create header*/
-#create > .flex > #createText > h1 {
+#create > .flex > #createText > .header {
   padding-left: 10vh;
   padding-bottom: 0%;
 }
 
 /* create text */
-#create > .flex > #createText > p {
+#create > .flex > #createText > .text {
   padding: 0vh 0vh 30vh 33vh;
 }
 
 /* create image */
-#create > .flex > #album > img {
+#create > .flex > #album > #songs {
   padding: 30vh 10vh 30vh 10vh;
   margin: 0%;
 }
@@ -185,14 +177,14 @@ a {
   background-color: #07171a;
 }
 
-#discover > h1 {
+#discover > .header {
   padding-left: 70vh;
 }
 
-#discover > .flex > p {
+#discover > .flex > .text {
   padding-right: 8vh;
 }
 
-#discover > .flex > img {
+#discover > .flex > #albums {
   padding: 10vh 8vh 10vh 10vh;
 }

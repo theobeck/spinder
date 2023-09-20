@@ -30,8 +30,12 @@ export default function FavoritesPage() {
     (song: SongRating) => song.liked,
   );
 
-  const songQuery = useQuery('song', () =>
-    spotifyAPI.getSongInfo(favoriteSongs.map((song: SongRating) => song.songId)),
+  const songQuery = useQuery(
+    'song',
+    () => spotifyAPI.getSongInfo(favoriteSongs.map((song: SongRating) => song.songId)),
+    {
+      enabled: favoriteSongs.length > 0, // Enable the query only if favoriteSongs is not empty
+    },
   );
 
   console.log(songQuery.data);

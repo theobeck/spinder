@@ -24,10 +24,11 @@ export default function FavoritesPage() {
 
   return (
     <>
-      <h1>Favorites</h1>
+      <h1 id="header">Favorites</h1>
         <BackButton/>
       <div className="song-list">
           <input
+              id="search"
               type="text"
               placeholder="Search"
               value={query}

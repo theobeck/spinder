@@ -6,7 +6,6 @@ html {
 
 body {
   margin: 0%;
-  width: fit-content;
 }
 
 @media (max-width: 1068px) {
@@ -183,7 +182,6 @@ body {
 #dummy-log-in {
   font: bold 11px Arial;
   text-decoration: none;
-  flex-wrap: nowrap;
   border-top: 1px solid #cccccc;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
@@ -192,9 +190,11 @@ body {
   background-color: #679289;
   padding: 2vh 7vh;
   border-radius: 35px;
-  font-size: 25px;
+  font-size: 20px;
   color: aliceblue;
   cursor: pointer;
+  margin: 5vh 2vh 5vh 2vh;
+  font-weight: 100;
 }
 
 /*phones image*/
@@ -236,8 +236,7 @@ body {
 
 /*Swipe header*/
 #swipe > .swipeDiv > .header {
-  padding-right: 70vh;
-  padding-left: 84vh;
+  padding: 10vh 70vh 0vh 84vh;
 }
 
 /* swipe text */
@@ -253,7 +252,7 @@ body {
 
 #create {
   background-color: #040c0e;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 /*create header*/
@@ -269,7 +268,7 @@ body {
 
 /* create image */
 #create > .flex > #album > #songs {
-  padding: 10vh 4vh 30vh 5vh;
+  padding: 0vh 4vh 15vh 5vh;
   margin: 0%;
 }
 
@@ -279,6 +278,7 @@ body {
 
 #discover > .header {
   padding-left: 70vh;
+  padding-top: 4vh;
 }
 
 #discover > .flex > .text {
@@ -286,5 +286,5 @@ body {
 }
 
 #discover > .flex > #albums {
-  padding: 10vh 8vh 10vh 10vh;
+  padding: 0vh 8vh 10vh 10vh;
 }

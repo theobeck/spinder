@@ -1,7 +1,7 @@
 import Back from '../../assets/back.png';
 import './index.css';
 import { Link } from 'react-router-dom';
-import { SpotifyAPI } from '../../authentication.ts';
+import { SpotifyAPI } from '../../utils/authentication.ts';
 import { useQuery } from 'react-query';
 import { SongRating } from '../PlayPage';
 

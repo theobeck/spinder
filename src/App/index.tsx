@@ -1,14 +1,14 @@
-import LandingPage from './pages/LandingPage';
+import LandingPage from '../pages/LandingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Callback from './pages/Callback.tsx';
+import Callback from '../pages/Callback.tsx';
 import React from 'react';
-import { SpotifyAPI } from './authentication.ts';
-import MainPage from './pages/MainPage';
-import FavoritesPage from './pages/FavoritesPage';
-import PlayPage from './pages/PlayPage';
+import { SpotifyAPI } from '../utils/authentication.ts';
+import MainPage from '../pages/MainPage';
+import FavoritesPage from '../pages/FavoritesPage';
+import PlayPage from '../pages/PlayPage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-function App() {
+export default function App() {
   const authorization = SpotifyAPI.getAuthorization();
 
   const queryClient = new QueryClient();
@@ -36,5 +36,3 @@ function App() {
     </QueryClientProvider>
   );
 }
-
-export default App;

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { parseAuthorizationHash, storeAuthorization } from '../authentication.ts';
+import { parseAuthorizationHash, storeAuthorization } from '../utils/authentication.ts';
 import {useNavigate} from "react-router-dom";
 
 export default function Callback() {

@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { SpotifyAPI } from '../../authentication.ts';
+import { SpotifyAPI } from '../../utils/authentication.ts';
 import './index.css';
 
 export default function UserDisplay() {

@@ -7,7 +7,7 @@ import './index.css';
 import React from 'react';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
-import {SpotifyAPI, storeAuthorization} from "../../authentication.ts";
+import {SpotifyAPI, storeAuthorization} from "../../utils/authentication.ts";
 
 export default function LandingPage() {
   const login_url =

@@ -28,7 +28,7 @@ export default function FavoritesPage() {
         <BackButton/>
       <div className="song-list">
           <input
-              id="search"
+              id="song-list-search"
               type="text"
               placeholder="Search"
               value={query}

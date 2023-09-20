@@ -22,3 +22,5 @@ men har også laget en mock-server som kan brukes for å teste appen uten
 Disse følger datastrukturene til spotify-apiet:
 `https://api.spotify.com/v1/me` -> `http://localhost:3000/me`
 Som beskrevet her: https://developer.spotify.com/documentation/web-api
+
+Vi har laget tester til appen, både snapshot og render tester. Disse kan kjøres med `npm test`.

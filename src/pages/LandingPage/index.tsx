@@ -7,6 +7,7 @@ import './index.css';
 import React from 'react';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
+import {SpotifyAPI, storeAuthorization} from "../../authentication.ts";
 
 export default function LandingPage() {
   const login_url =
@@ -16,8 +17,15 @@ export default function LandingPage() {
     '&scope=' +
     encodeURIComponent('user-read-private user-read-email') +
     '&redirect_uri=' +
-    encodeURIComponent('http://localhost:5173/callback') +
+    encodeURIComponent(window.location.host === "it2810-13.idi.ntnu.no" ?
+        "http://it2810-13.idi.ntnu.no/project1/callback" :
+        "http://localhost:5173/callback") +
     '&show_dialog=true';
+
+  function dummy_sign_in() {
+    storeAuthorization(SpotifyAPI.getDummyAuthorization());
+    window.location.href = window.location.href.replace(/\/[^/]*$/, '');
+  }
 
   return (
     <>
@@ -32,6 +40,9 @@ export default function LandingPage() {
             <Link id="log-in" to={login_url}>
               Log in
             </Link>
+            <a id="dummy-log-in" onClick={dummy_sign_in}>
+                Bruk som gjest
+            </a>
           </div>
         </nav>
 

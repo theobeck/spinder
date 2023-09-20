@@ -18,22 +18,25 @@ export type Song = {
 };
 
 export class SpotifyAPI {
-  access_token: string;
-  expires: number;
+  access_token: string | null;
+  expires: number | null;
+  dummy: boolean;
 
-  constructor(access_token: string, expires: number) {
+  constructor(access_token: string | null, expires: number | null, dummy = false) {
     this.access_token = access_token;
     this.expires = expires;
+    this.dummy = dummy;
   }
 
   public static getAuthorization(): SpotifyAPI | null {
     const storedAuth = sessionStorage.getItem('authentication');
     if (storedAuth) {
-      console.log('I AM STORED');
       const auth = JSON.parse(storedAuth);
       const access_token = auth.access_token;
       const expires = auth.expires;
-      console.log(access_token);
+      const dummy = auth.dummy;
+
+      if (dummy) return new SpotifyAPI(null, null, dummy);
 
       if (expires < Date.now()) {
         sessionStorage.removeItem('authentication');
@@ -45,11 +48,17 @@ export class SpotifyAPI {
 
     return null;
   }
+  
+  public static getDummyAuthorization(): SpotifyAPI {
+    return new SpotifyAPI(null, null, true);
+  }
 
   private async apiCall(endpoint: string, params?: string): Promise<any> {
+    if (this.dummy)
+      endpoint = endpoint.replace('https://api.spotify.com/v1', 'https://webdevdummyapi.jotjern.no');
     const response = await fetch(`${endpoint}${params || ''}`, {
       headers: {
-        Authorization: `Bearer ${this.access_token}`,
+        Authorization: this.dummy ? "" : `Bearer ${this.access_token}`,
       },
     });
 
@@ -93,12 +102,13 @@ export class SpotifyAPI {
 
   public logout() {
     sessionStorage.removeItem('authentication');
-    window.location.href = '/';
+    // remove everything after last /
+    window.location.href = window.location.href.replace(/\/[^/]*$/, '');
   }
 }
 
 export function storeAuthorization(auth: SpotifyAPI) {
-  sessionStorage.setItem('authentication', JSON.stringify({ access_token: auth.access_token, expires: auth.expires }));
+  sessionStorage.setItem('authentication', JSON.stringify({ access_token: auth.access_token, expires: auth.expires, dummy: auth.dummy }));
 }
 
 export function parseAuthorizationHash(hash: string): SpotifyAPI | null {

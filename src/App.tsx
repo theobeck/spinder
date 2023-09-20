@@ -1,7 +1,7 @@
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Callback from './pages/Callback.tsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SpotifyAPI } from './authentication.ts';
 import MainPage from './pages/MainPage';
 import FavoritesPage from './pages/FavoritesPage';
@@ -11,18 +11,12 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 function App() {
   const authorization = SpotifyAPI.getAuthorization();
 
-  useEffect(() => {
-    if (authorization === null && window.location.pathname !== '/' && window.location.pathname !== '/callback') {
-      window.location.href = '/';
-    }
-  }, [authorization]);
-
   const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
       {authorization ? (
-        <Router>
+        <Router basename={window.location.host === "it2810-13.idi.ntnu.no" ? "project1" : "/"}>
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
@@ -32,7 +26,7 @@ function App() {
           </Routes>
         </Router>
       ) : (
-        <Router>
+        <Router basename={window.location.host === "it2810-13.idi.ntnu.no" ? "project1" : "/"}>
           <Routes>
             <Route path="/callback" element={<Callback />} />
             <Route path="/" element={<LandingPage />} />

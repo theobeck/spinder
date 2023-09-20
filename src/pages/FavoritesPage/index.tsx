@@ -22,7 +22,7 @@ export default function FavoritesPage() {
     <>
       <h1>Favorites</h1>
       <Link to="/">
-        <img id="back" src={Back} />
+        <img id="back" alt="<" src={Back} />
       </Link>
       <div className="song-list">
         {songQuery.data &&
